@@ -3,7 +3,7 @@
 int** create_two_dim_array(int row , int column) 
 {
 	int** arr = new int* [row];
-	for (int i = 1 ;i < row +1 ; i++  ) 
+	for (int i = 0 ;i < row  ; i++  ) 
 	{
 		arr[i] = new int[column];
 	}
@@ -11,19 +11,20 @@ int** create_two_dim_array(int row , int column)
 }
 void fill_two_dim_array(int** arr , int row , int column ) 
 {
-	for (int x = 1 ; x < row+1; x++) 
+	for (int x = 0 ; x < row; x++) 
 	{
-		for (int y = 1 ; y < column+1; ++y) 
+		for (int y = 0 ; y < column; y++) 
 		{
-			arr[x][y] = x * y;
+			 arr[x][y] = (x + 1) * (y + 1) ;
+
 		}
 	}
 }
 void print_two_dim_array(int** arr,int row ,int column) 
 {
-	for (int x = 1 ; x < row+1; x++) 
+	for (int x = 0 ; x < row; x++) 
 	{
-		for (int y  = 1; y < column+1; ++y) 
+		for (int y  = 0; y < column; ++y) 
 		{
 			std::cout << arr[x][y] << ' ';
 		}
@@ -33,7 +34,7 @@ void print_two_dim_array(int** arr,int row ,int column)
 }
 void delete_two_dim_array(int** arr , int row , int column) 
 {
-	for (int x = 1 ; x < row+1; x++) 
+	for (int x = 0 ; x < row; x++) 
 	{
 	
 		delete[] arr[x];
